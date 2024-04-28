@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 export const Banner = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
-  const carouselImages = ['https://img.freepik.com/free-photo/india-republic-day-celebration-digital-art-with-woman-portrait_23-2151070802.jpg?t=st=1714193660~exp=1714197260~hmac=53483875224ead818dee0c1678f27312c013af75f1b3c5ac75ebd5c96e976921&w=1060','https://i.pinimg.com/originals/b8/69/28/b86928cdfff186dc6c8aa7f6ffa8271b.jpg','https://i.pinimg.com/originals/3c/12/80/3c128099655f6c725389959fb1f0f5ed.jpg','https://macdndev.azureedge.net/genesis-temp/9/f/d/0/0/d/9fd00de2ba23aedbb81f87e9008b5f50ef63769b.jpg'];
+  const carouselImages = ['https://c4.wallpaperflare.com/wallpaper/553/854/434/digital-art-fantasy-art-landscape-long-hair-wallpaper-preview.jpg','https://i.pinimg.com/originals/b8/69/28/b86928cdfff186dc6c8aa7f6ffa8271b.jpg','https://i.pinimg.com/originals/3c/12/80/3c128099655f6c725389959fb1f0f5ed.jpg','https://macdndev.azureedge.net/genesis-temp/9/f/d/0/0/d/9fd00de2ba23aedbb81f87e9008b5f50ef63769b.jpg'];
   const prevSlider = () => setCurrentSlider((currentSlider) => currentSlider === 0 ? carouselImages.length - 1 : currentSlider - 1);
   const nextSlider = useCallback(() => setCurrentSlider((currentSlider) => currentSlider === carouselImages.length - 1 ? 0 : currentSlider + 1), [carouselImages.length]);
 

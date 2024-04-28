@@ -13,7 +13,7 @@ const Error = () => {
 			<p className="text-2xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
 			<p className="mt-4 mb-8 dark:text-gray-600">But dont worry, you can find plenty of other things on our homepage.</p>
 			<Link to="/"> 
-                <button className="btn btn-secondary text-2xl ">Back to homepage</button>
+                <button className="btn btn-info text-2xl ">Back to homepage</button>
             </Link>
 		</div>
 	</div>

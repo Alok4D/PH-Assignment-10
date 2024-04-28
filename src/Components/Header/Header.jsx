@@ -42,8 +42,8 @@ const links = (
         </div>
 
      <div className="flex gap-4 justify-center items-center cursor-pointer">
-     <img src="../../../public/Logo-Images/logo.png" alt="industrial-logo-image" />
-        {/* <h2 className="lg:text-[40px] font-extrabold">Vactor</h2> */}
+     <img src="../../../public/Logo-Images/logo.png" alt="industrial-logo-image" className="" />
+        
      </div>
 
      

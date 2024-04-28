@@ -8,7 +8,7 @@ const CardSection = () => {
          <Banner></Banner>
 
       <div className="mt-8 mb-8">
-        <h2 className="text-[#131313] text-[50px] text-center">Estate Section</h2>
+        <h2 className="text-[#131313] text-[50px] text-center">Craft Items Section</h2>
       </div>
 
 {/*  
