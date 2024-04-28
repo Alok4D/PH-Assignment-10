@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// toast
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+
 import { AuthContext } from "../Auth-Provaider/AuthProvaider";
+import { toast, ToastContainer } from "react-toastify";
 
 
 const Register = () => {

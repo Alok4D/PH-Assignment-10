@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Auth-Provaider/AuthProvaider";
 
 
 const Header = () => {
+
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
   
 const links = (
   <>
@@ -54,11 +59,19 @@ const links = (
       <div className="navbar-center hidden  lg:flex">
         <ul className="menu menu-horizontal px-1 gap-3">{links}</ul>
       </div>
-      <div className="lg:navbar-end lg:gap-4 gap-2 ">
+      <div className="lg:navbar-end lg:gap-4 gap-2">
         
-     
+      {user ? (
+          <div className="flex gap-4 justify-center items-center">
+           
+
+          <div className="tooltip" data-tip={user.displayName}>
+            <img className="border rounded-full h-[45px]" src={user.photoURL} />
+          </div>
+            <button onClick={() => logOut()} className="btn bg-[#F60] text-[16px]">Log Out</button></div>) : 
+            (<Link to="/login"><a className="btn bg-[#F60] text-[16px]">Login</a></Link>)}
           
-            <Link to="/login"><a className="btn bg-[#F60] text-[16px]">Login</a></Link>
+      
 
       </div>
     </div>

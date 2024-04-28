@@ -1,4 +1,5 @@
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import React from 'react'
@@ -59,7 +60,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <RouterProvider router={router} />
   
     </AuthProvider>
- 
+  <ToastContainer></ToastContainer>
   </React.StrictMode>,
 
 )
