@@ -11,8 +11,13 @@ const AddCraftItem = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const email = form.email.value;
+        const itemName = form.itemName.value;
+        const processingTime = form.processingTime.value;
+        const customizationExample = form.customizationExample.value;
+        const stockStatus = form.stockStatus.value;
         const description = form.description.value;
-        const newItem = {name, photo, rating, price, email, description}
+        const subcategory = form.subcategory.value;
+        const newItem = {name, photo, rating, price, email, description, itemName, customizationExample, processingTime, stockStatus, subcategory}
         console.log(newItem);
 
         // send data to the server
@@ -57,7 +62,7 @@ const AddCraftItem = () => {
           {/* form */}
           <div  className=" mb-10">
                 <form onSubmit={handleAddCraftItem} className=" w-full p-5 bg-gray-300">
-                    <h1 className="text-5xl font-bold text-center mb-4">Add Tourists Spots</h1>
+                   
                     <div className="grid grid-cols-2 gap-5">
                         <div>
                             <div  className="mb-6">
@@ -119,7 +124,7 @@ const AddCraftItem = () => {
                             <div className="mb-6">
                                 <h3 className="font-bold">processing time :</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text" name="processingTime" placeholder="Travel Time" required/>
+                                    <input type="text" name="processingTime" placeholder="processing Time" required/>
                                 </label>
                                 
                             </div>

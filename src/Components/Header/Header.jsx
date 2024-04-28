@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Header = () => {
@@ -9,6 +9,8 @@ const links = (
     <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/aboutUs">All Art & craft Items</NavLink></li>
     <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/addCraftItem">Add Craft Item</NavLink></li>
     <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/contact">My Art&Craft List</NavLink></li>
+   
+
   </>
 );
 
@@ -54,13 +56,10 @@ const links = (
       </div>
       <div className="lg:navbar-end lg:gap-4 gap-2 ">
         
-      
-          <div className="flex gap-4 justify-center items-center">
-           
+     
+          
+            <Link to="/login"><a className="btn bg-[#F60] text-[16px]">Login</a></Link>
 
-        
-            <button className="btn bg-[#F60] text-[16px]">Log Out</button></div>
-           <a className="btn bg-[#F60] text-[16px]">Login</a>
       </div>
     </div>
   );

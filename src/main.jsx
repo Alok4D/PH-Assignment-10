@@ -14,6 +14,9 @@ import Root from './Components/Roots/Root';
 import Error from './Components/Error-Page/Error';
 import CardSection from './Components/Card-Section-pages/CardSection';
 import AddCraftItem from './Components/Add-Craft-Items/AddCraftItem';
+import CardDetails from './Components/CardDetails/CardDetails';
+import Login from './Components/Login-Pages/Login';
+// import Register from './Components/Register-Pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -27,9 +30,22 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/addCraft')
       },
       {
+        path: '/cardDetails/:id',
+        element: <CardDetails></CardDetails>,
+       
+      },
+      {
         path: '/addCraftItem',
         element: <AddCraftItem></AddCraftItem>,
-      }
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      // {
+      //   path: "/register",
+      //   element: <Register></Register>
+      // },
     ]
   }
 ]);
