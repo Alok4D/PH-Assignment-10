@@ -16,7 +16,8 @@ import CardSection from './Components/Card-Section-pages/CardSection';
 import AddCraftItem from './Components/Add-Craft-Items/AddCraftItem';
 import CardDetails from './Components/CardDetails/CardDetails';
 import Login from './Components/Login-Pages/Login';
-// import Register from './Components/Register-Pages/Register';
+import AuthProvider from './Components/Auth-Provaider/AuthProvaider';
+import Register from './Components/Register-Pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -42,10 +43,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
-      // {
-      //   path: "/register",
-      //   element: <Register></Register>
-      // },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
     ]
   }
 ]);
@@ -53,7 +54,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-   <RouterProvider router={router} />
+<AuthProvider>
+  
+      <RouterProvider router={router} />
+  
+    </AuthProvider>
  
   </React.StrictMode>,
 
