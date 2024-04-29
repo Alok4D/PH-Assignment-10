@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Card from "../CraftCard-Section/Card";
+import Categories from "../Categories-pages/Categories";
 
 
 const CardSection = () => {
@@ -23,7 +24,9 @@ const CardSection = () => {
         }
       </div>
 
-
+       <div>
+       <Categories></Categories>
+       </div>
      
 
     </div>

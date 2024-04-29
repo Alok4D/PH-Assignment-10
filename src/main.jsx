@@ -19,6 +19,7 @@ import CardDetails from './Components/CardDetails/CardDetails';
 import Login from './Components/Login-Pages/Login';
 import AuthProvider from './Components/Auth-Provaider/AuthProvaider';
 import Register from './Components/Register-Pages/Register';
+import ProtectedRoute from './Components/Protected-Routes/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/cardDetails/:id',
         element: <CardDetails></CardDetails>,
+       
        
       },
       {
