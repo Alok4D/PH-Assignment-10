@@ -3,14 +3,15 @@ import { useParams } from "react-router-dom";
 
 
 const CardDetails = () => {
-    const [veiwDetail, setVeiwDetails] = useState({}); 
+    const [viewDetail, setViewDetails] = useState(''); 
+    console.log(viewDetail);
     const {id} = useParams();
     useEffect(()=>{
 
         fetch(`http://localhost:5173/viewDetail/${id}`)
         .then(res => res.json())
         .then(data => {
-            setVeiwDetails(data)
+            setViewDetails(data)
         })
     },[id])
 
@@ -21,7 +22,7 @@ const CardDetails = () => {
     // const cardBio = cardDetail.find(item => item.id == dataInt)
     // console.log(cardBio);
 
-    const {name, photo, price, description, itemName, subcategory} = veiwDetail;
+    const {name, photo, price, description, itemName, subcategory} = viewDetail;
 
 
     return (
