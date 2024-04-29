@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 const AddCraftItem = () => {
@@ -31,13 +32,14 @@ const AddCraftItem = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedID){
-                swal.fire({
-                    title: 'Error!',
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'success!',
                     text: 'Do you want to continue',
-                    icon: 'error',
+                    icon: 'success',
                     confirmButtonText: 'Cool'
                   })
+                  form.reset();
             }
         })
     }

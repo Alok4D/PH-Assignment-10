@@ -3,6 +3,7 @@ import Basket from "../../../public/CateGories-Images/02.jpg";
 import Light from "../../../public/CateGories-Images/03.jpg";
 import Cutlery from "../../../public/CateGories-Images/04.jpg";
 import Canvas from "../../../public/CateGories-Images/05.jpg";
+import Features from "../Fetures-Pages/Features";
 
 
 // import AOS from 'aos';
@@ -56,7 +57,9 @@ const Categories = () => {
                
             </div>
         </div>
-
+        <div>
+            <Features></Features>
+        </div>
     </section>
     );
 };

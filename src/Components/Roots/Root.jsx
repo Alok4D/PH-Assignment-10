@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 
+
 const Root = () => {
     return (
         <div>
@@ -10,6 +11,7 @@ const Root = () => {
        <div>
        <Header></Header>
          <Outlet></Outlet>
+        
        </div>
        
       <Footer></Footer>

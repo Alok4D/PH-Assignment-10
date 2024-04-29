@@ -3,7 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
-import { AuthContext } from "../Auth-Provaider/AuthProvaider";
+import { AuthContext } from "../Auth-Provider/AuthProvaider";
 import { toast, ToastContainer } from "react-toastify";
 
 

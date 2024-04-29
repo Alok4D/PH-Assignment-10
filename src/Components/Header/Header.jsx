@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../Auth-Provaider/AuthProvaider";
+import { AuthContext } from "../Auth-Provider/AuthProvaider";
+
 
 
 const Header = () => {

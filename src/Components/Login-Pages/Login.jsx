@@ -6,7 +6,7 @@
 // import { Helmet } from "react-helmet-async";
 
 import { useContext, useEffect } from "react";
-import { AuthContext } from "../Auth-Provaider/AuthProvaider";
+import { AuthContext } from "../Auth-Provider/AuthProvaider";
 import { Link, Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 

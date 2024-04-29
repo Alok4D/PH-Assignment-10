@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
 
 const CardDetails = () => {
-    const [viewDetail, setViewDetails] = useState(''); 
-    console.log(viewDetail);
-    const {id} = useParams();
-    useEffect(()=>{
 
-        fetch(`http://localhost:5173/viewDetail/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            setViewDetails(data)
-        })
-    },[id])
+    const viewDetail = useLoaderData();
+
+    // const [viewDetail, setViewDetail] = useState({}); 
+   
+    // console.log(viewDetail);
+    // const {_id} = useParams();
+    // console.log(_id);
+    // useEffect(()=>{
+
+    //     fetch(`http://localhost:5000/viewDetail/${_id}`)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         setViewDetail(data)
+    //     })
+    // },[_id])
 
     // const cardDetail = useLoaderData();
     // console.log(cardDetail);
@@ -22,21 +27,22 @@ const CardDetails = () => {
     // const cardBio = cardDetail.find(item => item.id == dataInt)
     // console.log(cardBio);
 
-    const {name, photo, price, description, itemName, subcategory} = viewDetail;
+    const {name, photo, rating, price, email, description, itemName, customizationExample, processingTime, stockStatus, subcategory} = viewDetail;
 
 
     return (
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 mt-[52px] mb-[52px] w-[80%] mx-auto ">
        
-            <title>View Details {id}</title>
+            {/* <title>View Details {id}</title> */}
       
 
     <div className="flex justify-center items-center bg-slate-200 border rounded-xl">
         <img src={photo} alt="Card Images" className="lg:p-8 p-2 lg:w-[1000px] w-[300px]"/>
     </div>
 <div className="c-details">
-    <h2 className="text-[#131313] text-[40px]">{description}</h2>
-    <span className="text-[#646262] text-[20px]">Category : {itemName}</span>
+    <span className="text-[#646262] text-[20px]">{itemName}</span>
+    <h2 className="text-[#131313] text-[18px]">{description}</h2>
+   
   
     <p className="text-[#131313] mt-3"><span className="text-[#131313] text-[16px]">Price : </span>{price}</p>
     <p></p>
