@@ -6,7 +6,7 @@ export const AuthContext = createContext(null)
 
 
 const AuthProvider = ({ children }) => {
-
+    
     const [user, setUser] = useState(null)
 
     const googleProvider = new GoogleAuthProvider()
@@ -45,8 +45,8 @@ const AuthProvider = ({ children }) => {
         setUser,
         googleLogin,
         logOut,
-        githubLogin,
-    
+        githubLogin
+       
      
         
     }

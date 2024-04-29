@@ -12,8 +12,11 @@ const Header = () => {
 const links = (
   <>
     <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/">Home</NavLink></li>
-    <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/aboutUs">All Art & craft Items</NavLink></li>
-    <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/addCraftItem">Add Craft Item</NavLink></li>
+    <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/allCard">All Art & craft Items</NavLink></li>
+    {
+      user &&
+      <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/addCraftItem">Add Craft Item</NavLink></li>
+    }
     <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/contact">My Art&Craft List</NavLink></li>
    
 

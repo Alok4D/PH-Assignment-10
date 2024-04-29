@@ -21,6 +21,8 @@ import Login from './Components/Login-Pages/Login';
 import Register from './Components/Register-Pages/Register';
 import AuthProvider from './Components/Auth-Provider/AuthProvaider';
 import Features from './Components/Fetures-Pages/Features';
+import ProtectedRoute from './Components/Protected-Routes/ProtectedRoute';
+import AllCard from './Components/AllArtAndCraftItem/AllCard';
 
 
 const router = createBrowserRouter([
@@ -36,13 +38,22 @@ const router = createBrowserRouter([
       },
       {
         path: '/cardDetails/:id',
-        element: <CardDetails></CardDetails>,
+        element: <ProtectedRoute>
+          <CardDetails></CardDetails>
+        </ProtectedRoute>,
        loader : ({params}) => fetch(`http://localhost:5000/viewDetail/${params.id}`)
        
       },
       {
+        path: '/AllCard',
+        element: <AllCard></AllCard>,
+        loader: () => fetch('http://localhost:5000/addCraft')
+      },
+      {
         path: '/addCraftItem',
-        element: <AddCraftItem></AddCraftItem>,
+        element:
+          <AddCraftItem></AddCraftItem>
+        ,
       },
       {
         path: "/login",
@@ -62,12 +73,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-<AuthProvider>
-  
+    <AuthProvider>
       <RouterProvider router={router} />
-  
     </AuthProvider>
+
   <ToastContainer></ToastContainer>
   </React.StrictMode>,
 

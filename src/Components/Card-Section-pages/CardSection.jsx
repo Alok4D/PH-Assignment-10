@@ -7,6 +7,7 @@ import Categories from "../Categories-pages/Categories";
 const CardSection = () => {
   const craftData = useLoaderData();
   console.log(craftData);
+  
 
     return (
         <div className="mt-8 mb-8">
