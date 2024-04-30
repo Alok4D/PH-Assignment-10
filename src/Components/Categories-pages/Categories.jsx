@@ -1,3 +1,4 @@
+import { limit } from "firebase/firestore";
 import HomeDecor from "../../../public/CateGories-Images/01.jpg";
 import Basket from "../../../public/CateGories-Images/02.jpg";
 import Light from "../../../public/CateGories-Images/03.jpg";
@@ -40,7 +41,7 @@ const Categories = () => {
                     <p className="dark:text-gray-600 mt-2">19 Products</p>
                 </div>
                 <div className="flex flex-col justify-center m-8 text-center">
-                    <img alt="" className="self-center flex-shrink-0 w-50 h-50 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500" src={Light} />
+                    <img alt="" className="self-center flex-shrink-0 w-50 h-50 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500" src={Canvas} />
                     <p className="text-xl font-semibold leading-tight">Home Light</p>
                     <p className="dark:text-gray-600 mt-2">16 Products</p>
                 </div>
@@ -50,7 +51,7 @@ const Categories = () => {
                     <p className="dark:text-gray-600 mt-2">10 Products</p>
                 </div>
                 <div className="flex flex-col justify-center m-8 text-center">
-                    <img alt="" className="self-center flex-shrink-0 w-50 h-50 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500" src={Canvas} />
+                    <img alt="" className="self-center flex-shrink-0 w-50 h-50 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500" src={Light} />
                     <p className="text-xl font-semibold leading-tight">Canvas and Art Boards</p>
                     <p className="dark:text-gray-600 mt-2">3 Products</p>
                 </div>
