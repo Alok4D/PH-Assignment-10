@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
--[Live Link(https://factory-auth-project.web.app/)]
+-[Live Link(https://art-auth-project.web.app/)]
 
 ### Required NPM Utility Packages Used in the Project:
 
