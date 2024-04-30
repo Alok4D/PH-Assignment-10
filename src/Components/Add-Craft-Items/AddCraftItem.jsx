@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 
 
@@ -44,8 +45,9 @@ const AddCraftItem = () => {
         })
     }
     return (
-        <div className="gadgetContainer pt-8 w-[80%] mx-auto mb-8">
-        <div className="shadow-lg p-5 border dark:bg-[#1a2641d5]">
+        <div className="gadgetContainer pt-10 w-[80%] mx-auto mb-10">
+            <Helmet><title>Add Craft Item</title></Helmet>
+        <div className="shadow-lg p-5 border dark:bg-[#1a2641d5] rounded-xl">
           {/* Heading */}
           <div className="mt-5 mb-8">
             <p className="text-center text-3xl font-semibold">

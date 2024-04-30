@@ -1,4 +1,4 @@
-import { limit } from "firebase/firestore";
+
 import HomeDecor from "../../../public/CateGories-Images/01.jpg";
 import Basket from "../../../public/CateGories-Images/02.jpg";
 import Light from "../../../public/CateGories-Images/03.jpg";
@@ -7,20 +7,20 @@ import Canvas from "../../../public/CateGories-Images/05.jpg";
 import Features from "../Fetures-Pages/Features";
 
 
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
-// import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 
 
 const Categories = () => {
 
-    // useEffect(() => {
-    //     AOS.init({
-    //       duration: 2000,
-    //     });
-    //   }, []);
+    useEffect(() => {
+        AOS.init({
+          duration: 2000,
+        });
+      }, []);
 
     return (
         <section className="py-6 w-[80%] mx-auto mt-7 dark:bg-gray-100 dark:text-gray-800" data-aos="zoom-in">

@@ -19,7 +19,7 @@ const CardSection = () => {
       </div>
 
   
-    <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-5 lg:w-[80%] mx-auto" data-aos="zoom-in">
+    <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-5 lg:w-[80%] mx-auto">
         {
             craftData.map(cardList => <Card key={cardList._id} cardList={cardList}></Card>)
         }

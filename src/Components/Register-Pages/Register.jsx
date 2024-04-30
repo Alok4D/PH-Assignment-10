@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import { AuthContext } from "../Auth-Provider/AuthProvaider";
 import { toast, ToastContainer } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -83,7 +84,7 @@ const Register = () => {
     }
     return (
         <div  className="w-80 md:w-96 lg:w-[500px] mx-auto mt-8 border rounded-xl bg-white flex items-center relative overflow-hidden shadow-xl mb-8"  data-aos="zoom-in">
-        {/* <Helmet><title>Create a an account</title></Helmet> */}
+        <Helmet><title>Create a an account</title></Helmet>
             {/* register form  */}
             <div className={`p-8 w-full duration-500` }>
                 <h1 className="font-extrabold lg:text-4xl pb-4 flex justify-center items-center">Register Now!</h1>

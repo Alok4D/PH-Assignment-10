@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 const CardData = ({ cardList }) => {
 
   const {photo, price, description, itemName, _id} = cardList;

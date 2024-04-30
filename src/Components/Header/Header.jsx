@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Auth-Provider/AuthProvaider";
+import headerLogo from "../../../public/Logo-Images/logo.png";
 
 
 
@@ -33,7 +34,7 @@ const links = (
       user &&
       <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/addCraftItem">Add Craft Item</NavLink></li>
     }
-    <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/contact">My Art&Craft List</NavLink></li>
+    <li className="text-[#F60] rounded-xl text-[16px]"><NavLink to="/myList">My Art & Craft List</NavLink></li>
    
 
   </>
@@ -69,7 +70,7 @@ const links = (
         </div>
 
      <div className="flex gap-4 justify-center items-center cursor-pointer">
-     <img src="../../../public/Logo-Images/logo.png" alt="industrial-logo-image" className="" />
+     <img src={headerLogo} alt="industrial-logo-image" className="" />
         
      </div>
 
